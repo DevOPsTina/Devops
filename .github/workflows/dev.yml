@@ -1,7 +1,7 @@
 name: dev-workflow
 on:
-  push:
-    branches: [ "Dev" ]
+  #push:
+    #branches: [ "Dev" ]
   pull_request:
     branches: [ "Dev" ]
 jobs:
