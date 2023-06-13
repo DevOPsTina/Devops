@@ -2,8 +2,8 @@ name: Dev-workflow
 on:
   push:
     branches: [ "Dev" ]
- # pull_request:
-  #  branches: [ "Dev" ]
+  pull_request:
+    branches: [ "Dev" ]
 jobs:
   build:
     runs-on: ubuntu-latest
