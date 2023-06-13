@@ -1,0 +1,12 @@
+name: dev-workflow
+on:
+  push:
+    branches: [ "Dev" ]
+  pull_request:
+    branches: [ "Dev" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        run: echo running workflow in main branch
