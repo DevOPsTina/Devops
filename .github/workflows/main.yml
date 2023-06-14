@@ -1,24 +1,16 @@
 name: main-workflow
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-  workflow_dispatch:
+    branches:
+      - main
+
 jobs:
-  build:
-    runs-on: self-hosted
+  ubuntu_hello:
+    runs-on: ubuntu-latest
     steps:
-      - name: Run a one-line script
-        run: |
-          echo running workflow in main branch
-          hostname
-          sleep 10
-          touch /tmp/tinajune
-      - name: second step 
-        run: echo "hello from second condition based step"
-        if: github.event_name == 'push'
-        
-      - name: third step
-        run: echo "hello from 3rd step"
+      - run: echo "Hello World from Ubuntu Runner!!"
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event"
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "GitHub Repository URL is ${{ github.repositoryUrl}} and branch is ${{ github.ref_name }} "
+
 
