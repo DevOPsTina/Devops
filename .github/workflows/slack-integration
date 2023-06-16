@@ -13,3 +13,4 @@ jobs:
         env:
            SLACK_WEBHOOK: ${{ secrets.slack_secret }}
 # Generate Slack Secret from https://techlanders-workspace.slack.com/apps/A0F7XDUAZ-incoming-webhooks
+# https://hooks.slack.com/services/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
